@@ -20,9 +20,9 @@
       
         <tags>
             
-            <tag> 实战渗透 </tag>
-            
             <tag> 渗透测试 </tag>
+            
+            <tag> 实战渗透 </tag>
             
         </tags>
       
@@ -269,9 +269,9 @@
       
         <tags>
             
-            <tag> 实战渗透 </tag>
-            
             <tag> 渗透测试 </tag>
+            
+            <tag> 实战渗透 </tag>
             
         </tags>
       
@@ -396,7 +396,7 @@
       <link href="/2022/03/31/P2P%E5%8A%A0%E5%AF%86%E8%81%8A%E5%A4%A9%E5%AE%A4%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8EXMPP-%E5%8F%AF%E7%BB%84%E5%BB%BA%E7%BE%A4%E8%81%8A/"/>
       <url>/2022/03/31/P2P%E5%8A%A0%E5%AF%86%E8%81%8A%E5%A4%A9%E5%AE%A4%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8EXMPP-%E5%8F%AF%E7%BB%84%E5%BB%BA%E7%BE%A4%E8%81%8A/</url>
       
-        <content type="html"><![CDATA[<p><strong>1. Ubuntu的源中已有ejabberd，直接通过apt-get安装即可</strong></p><blockquote><p>apt-get install ejabberd</p></blockquote><p><strong>2. 安装完成后可以通过浏览器来访问后台页面，默认端口是5280</strong></p><blockquote><p>http:&#x2F;&#x2F;服务器地址:5280&#x2F;admin</p></blockquote><p><strong>3. 这个时候需要提供用户名和密码，可以通过命令 ejabberdctl 注册用户，</strong></p><blockquote><p>ejabberdctl register admin localhost password</p></blockquote><p><strong>这个时候默认的域名是localhost，可以通过修改配置文件&#x2F;etc&#x2F;ejabberd&#x2F;ejabberd.cfg来修改域名</strong></p><p><img src="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231813553.jpeg" class="lazyload placeholder" data-srcset="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231813553.jpeg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="1.jpg"></p><p><strong>重新启动服务器</strong></p><blockquote><p>service ejabberd restart</p></blockquote><p><strong>配合Pidgin链接</strong></p><p><img src="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231813528.png" class="lazyload placeholder" data-srcset="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231813528.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="2.png"></p><p><strong>文件传输</strong></p><p><img src="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231813579.png" class="lazyload placeholder" data-srcset="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231813579.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="3.png"><br><strong>下载地址：</strong><br><strong><a href="https://anonfiles.com/b8n96eIbwd/pidgin-2.14.8_exe">pidgin-2.14.8.exe-聊天工具</a></strong><br><strong><a href="https://anonfiles.com/f9Bb59Ifw9/pidgin-otr-4.0.2_exe">pidgin-otr-4.0.2.exe-加密工具</a></strong></p><p><strong>本论坛服务器地址：</strong> </p><blockquote><p>apt110.com<br><a href="http://www.apt110.com/">www.apt110.com</a></p></blockquote><p><strong>本人PidGin好友名称：</strong></p><blockquote><p><a href="mailto:&#109;&#117;&#x63;&#x68;&#117;&#97;&#x6e;&#x40;&#97;&#x70;&#116;&#x31;&#x31;&#x30;&#x2e;&#x63;&#x6f;&#109;">&#109;&#117;&#x63;&#x68;&#117;&#97;&#x6e;&#x40;&#97;&#x70;&#116;&#x31;&#x31;&#x30;&#x2e;&#x63;&#x6f;&#109;</a></p></blockquote><p><strong>需要联系本人进行账号注册</strong></p>]]></content>
+        <content type="html"><![CDATA[<p><strong>1. Ubuntu的源中已有ejabberd，直接通过apt-get安装即可</strong></p><blockquote><p>apt-get install ejabberd</p></blockquote><p><strong>2. 安装完成后可以通过浏览器来访问后台页面，默认端口是5280</strong></p><blockquote><p>http:&#x2F;&#x2F;服务器地址:5280&#x2F;admin</p></blockquote><p><strong>3. 这个时候需要提供用户名和密码，可以通过命令 ejabberdctl 注册用户，</strong></p><blockquote><p>ejabberdctl register admin localhost password</p></blockquote><p><strong>这个时候默认的域名是localhost，可以通过修改配置文件&#x2F;etc&#x2F;ejabberd&#x2F;ejabberd.cfg来修改域名</strong></p><p><img src="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231813553.jpeg" class="lazyload placeholder" data-srcset="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231813553.jpeg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="1.jpg"></p><p><strong>重新启动服务器</strong></p><blockquote><p>service ejabberd restart</p></blockquote><p><strong>配合Pidgin链接</strong></p><p><img src="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231813528.png" class="lazyload placeholder" data-srcset="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231813528.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="2.png"></p><p><strong>文件传输</strong></p><p><img src="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231813579.png" class="lazyload placeholder" data-srcset="https://raw.githubusercontent.com/ANQUSEC/imget/master//blogImg/202201231813579.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="3.png"><br><strong>下载地址：</strong><br><strong><a href="https://anonfiles.com/b8n96eIbwd/pidgin-2.14.8_exe">pidgin-2.14.8.exe-聊天工具</a></strong><br><strong><a href="https://anonfiles.com/f9Bb59Ifw9/pidgin-otr-4.0.2_exe">pidgin-otr-4.0.2.exe-加密工具</a></strong></p><p><strong>本论坛服务器地址：</strong> </p><blockquote><p>apt110.com<br><a href="http://www.apt110.com/">www.apt110.com</a></p></blockquote><p><strong>本人PidGin好友名称：</strong></p><blockquote><p><a href="mailto:&#109;&#x75;&#99;&#x68;&#x75;&#97;&#x6e;&#64;&#97;&#x70;&#116;&#49;&#49;&#x30;&#x2e;&#99;&#x6f;&#x6d;">&#109;&#x75;&#99;&#x68;&#x75;&#97;&#x6e;&#64;&#97;&#x70;&#116;&#49;&#49;&#x30;&#x2e;&#99;&#x6f;&#x6d;</a></p></blockquote><p><strong>需要联系本人进行账号注册</strong></p>]]></content>
       
       
       <categories>
@@ -437,9 +437,9 @@
       
         <tags>
             
-            <tag> 实战 </tag>
-            
             <tag> 渗透测试 </tag>
+            
+            <tag> 实战 </tag>
             
             <tag> APT </tag>
             
@@ -466,9 +466,9 @@
       
         <tags>
             
-            <tag> tor </tag>
-            
             <tag> 匿名 </tag>
+            
+            <tag> tor </tag>
             
         </tags>
       
